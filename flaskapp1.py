@@ -13,7 +13,7 @@ WML_CREDENTIALS = {
         "apikey": CLOUD_API_KEY
 }
 space_id=os.environ['space_id']
-deployment_id='os.environ['deployment_id']
+deployment_id=os.environ['deployment_id']
 @app.route('/spaces/<space_id>/deployments/<deployment_id>/predictions', methods=['POST'])
 def wml_scoring(space_id, deployment_id):
 	print(1)
