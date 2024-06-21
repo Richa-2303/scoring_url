@@ -4,6 +4,7 @@ import base64
 import requests, io
 import pandas as pd
 from ibm_watson_machine_learning import APIClient
+import os
 
 app = Flask(__name__)
 
