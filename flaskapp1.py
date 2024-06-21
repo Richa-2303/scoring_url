@@ -7,13 +7,13 @@ from ibm_watson_machine_learning import APIClient
 
 app = Flask(__name__)
 
-CLOUD_API_KEY = "AOp1AIdPxmbFLO5RWdmxgm9u5RU8ck2e1NRurT7qD3I4"
+CLOUD_API_KEY = os.environ['CLOUD_API_KEY']
 WML_CREDENTIALS = {
         "url": "https://us-south.ml.cloud.ibm.com",
         "apikey": CLOUD_API_KEY
 }
-space_id='ac4d416b-be97-4ae6-826f-159eb627edbb'
-deployment_id='5f6054e4-08a3-4a5a-8883-108bfa07afb7'
+space_id=os.environ['space_id']
+deployment_id='os.environ['deployment_id']
 @app.route('/spaces/<space_id>/deployments/<deployment_id>/predictions', methods=['POST'])
 def wml_scoring(space_id, deployment_id):
 	print(1)
